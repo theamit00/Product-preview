@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@400;500;700&display=swap');
+
+/* font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; */
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* ****** PRIMARY COLORS ******** */
+
+    --darkCyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    /* ****** NEUTRAL COLORS ******** */
+
+    --VeryDarkBlue: hsl(212, 21%, 14%);
+    --DarkGrayishBlue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+html{
+    font-size: 100%;
+}
+
+body {
+    font-size: 14px;
+    background-color: var(--Cream);
+}
+
+.sameText{
+    color: var(--DarkGrayishBlue);
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.allMargin{
+    margin-bottom: 2rem;
+}
+
+section{
+    width: 50%;
+    display: flex;
+    margin: 9rem auto;
+    border-radius: 1rem;
+    background-color: var(--White);
+}
+
+.image{
+    min-width: 50%;
+    /* background-image: url(images/image-product-desktop.jpg);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.detail{
+    display: flex;
+    flex-direction: column;
+    /* background-color: var(--White); */
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 3rem;
+    min-width: 50%;
+    /* font-size: 1rem; */
+}
+
+.detail #perfume{
+    display: flex;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+
+.detail #name{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.detail #desc{
+
+    font-size: 1.2rem;
+    line-height: 2rem;
+
+}
+
+.detail #prices{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.detail #prices #curPrice{
+
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--darkCyan);
+    margin-right: 1.8rem;
+}
+
+.detail #prices #prevPrice{
+    text-decoration: line-through;
+    font-size: 1rem;
+}
+
+.detail #btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--darkCyan);
+    padding: 1.2rem;
+    border-radius: .7rem;
+    cursor: pointer;
+}
+
+.detail #btn img{
+    width: 8%;
+    margin-right: .8rem;
+}
+
+.detail #btn span{
+    color: var(--White);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+#btn:hover{
+    background-color: hsl(158, 36%, 20%);
+}
+
+
+
+@media (max-width: 700px){
+
+    html{
+        font-size: 80%;
+    }
+
+    .allMargin{
+        margin-bottom: 1rem;
+    }
+
+    section{
+        flex-direction: column;
+        width: 90%;
+        margin: 1.5rem auto;
+        border-radius: .8rem;
+        /* height: 50vh; */
+        /* height: 500px; */
+    }
+
+
+    /* .image{
+        /* width: 100%; */
+        /* min-height: 30vh; */
+        /* background-image: url(images/image-product-desktop.jpg);
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: .8rem;
+        border-top-left-radius: .8rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; */
+    /* }  */
+
+    .image img{
+        width: 100%;
+        /* height: 50%; */
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: .8rem;
+    }
+
+    .detail{
+        padding: 2rem 2rem;
+        max-width: 100%;
+        border-bottom-left-radius: .8rem;
+        border-bottom-right-radius: .8rem;
+        border-top-right-radius: 0px;
+        /* min-height: 50%; */
+    }
+
+    .detail #perfume{
+        font-size: .8rem;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+    }
+
+    .detail #name{
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+
+    .detail #desc{
+
+        font-size: .9rem;
+        line-height: 1.5rem;
+    
+    }
+
+    .detail #prices{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .detail #prices #curPrice{
+    
+        font-size: 1.8rem;
+        margin-right: 1.2rem;
+    }
+    
+    .detail #prices #prevPrice{
+        font-size: .8rem;
+    }
+
+    .detail #btn{
+        padding: 1rem;
+        border-radius: .7rem;
+    }
+    
+    .detail #btn img{
+        width: 6%;
+        margin-right: .6rem;
+    }
+    
+    .detail #btn span{
+        color: var(--White);
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width : 200px){
+    
+    html{
+        font-size: 62%;
+    }
+
+    .detail #prices{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+}
+
+
+
+
